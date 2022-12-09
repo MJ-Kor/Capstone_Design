@@ -55,6 +55,7 @@ async function predict() {
             count++
             var audio = new Audio(count % 10 + '.mp3')
             audio.play();
+            $('#counter').html(count);
         }
         status = "stand"
     }
