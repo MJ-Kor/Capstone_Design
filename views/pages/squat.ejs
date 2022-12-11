@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <script src="/js/annyang.js"></script>
+  <script src="/js/command.js"></script>
+  <script>
+    if (annyang) {
+      annyang.addCommands(squat_commands);
+      annyang.start();
+  }
+  </script>
+  <title>Document</title>
+</head>
+<body>
+  <div class="name">스쿼트</div>
+  <button type="button" onclick="history.back()">뒤로가기</button>
+  <div class="small"></div>Counter
+    <div class="text">
+      <span id="counter">0</span><div class="small"></div>
+  </div>  
+  <div><canvas id="canvas"></canvas></div>
+  <div id="label-container"></div>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+  <script src="/js/squat.js"></script>
+  
+</html>

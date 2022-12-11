@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+    <head><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../style.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+</head>
+    <meta charset="UTF-8">
+    <title>운동선택화면</title>
+    <script src="/js/annyang.js"></script>
+    <script src="/js/command.js"></script>
+    <script>
+        if (annyang) {
+        annyang.addCommands(fit_commands);
+        annyang.start();
+    }
+    </script>
+    <body>
+        <h1 id="clock">clock</h1>
+        <script>
+            var Target = document.getElementById("clock");
+            function clock() {
+                var time = new Date();
+    
+                var month = time.getMonth();
+                var date = time.getDate();
+                var day = time.getDay();
+                var week = ['일', '월', '화', '수', '목', '금', '토'];
+                
+                var hours = time.getHours();
+                var minutes = time.getMinutes();
+                var seconds = time.getSeconds();
+    
+                Target.innerText = 
+                `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}\n` +
+                `${month + 1}월 ${date}일 ${week[day]}요일`;
+                                
+            }
+            clock();
+            setInterval(clock, 1000); // 1초마다 실행
+        </script>
+        <div class="wrap">
+            <div class="intro">
+                <div class="header">
+                </div>
+                <ul class="nav">
+                    <li><a href="#" onclick="location.href='/pages/squat.html'">스쿼트</a></li>
+                    <li><a href="#">런지</a></li>
+                    <li><a href="#">케틀벨프레스</a></li>
+                    <li><a href="#">버피테스트</a></li>
+                    <li><a href="#" onclick="goBack()">뒤로가기</a></li>
+                    <script>
+                        function goBack(){
+                            window.history.back();
+                        }
+                    </script>
+                </ul>
+            </div>
+        </div>
+
+    </body>
+</html>
