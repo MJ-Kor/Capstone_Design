@@ -10,6 +10,7 @@
     <script src="/js/annyang.js"></script>
     <script src="/js/command.js"></script>
     <script>
+    // 음성 인식 기능 활성화
         if (annyang) {
         annyang.addCommands(fit_commands);
         annyang.start();
@@ -43,6 +44,8 @@
             <div class="intro">
                 <div class="header">
                 </div>
+                
+                // 운동 목록
                 <ul class="nav">
                     <li><a href="#" onclick="location.href='/pages/squat.html'">스쿼트</a></li>
                     <li><a href="#">런지</a></li>
