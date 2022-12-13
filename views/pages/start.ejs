@@ -12,6 +12,7 @@
     <script src="/js/command.js"></script>
     <title>초기화면</title>
     <script>
+    // 음성 인식 기능 활성화
     if (annyang) {
     annyang.addCommands(home_commands);
     annyang.start();
@@ -23,6 +24,8 @@
     <h1 id="clock">clock</h1>
     <script>
         var Target = document.getElementById("clock");
+        
+        // 시간 기능
         function clock() {
             var time = new Date();
 
@@ -46,6 +49,7 @@
     </script>
     </div>
     
+    // 날씨 기능
     <h2>오늘의 광주 날씨</h2>
     <h4 class="ctemp">현재 온도는 </h4>
     <h4 class="lowtemp">최저 온도: </h4>
